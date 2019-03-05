@@ -1,0 +1,30 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pizzas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pizzas {
+    .collection-check-box {
+        display: flex;
+        margin-right: 10px;
+    }
+    label[for="restaurant_Choose pizzas"] {
+        width: 100%;
+    }
+}
+
+[class^=pizza-] {
+    display: inline-block;
+}
+
+.pizza-name {
+    width: 100px;
+}
+
+.pizza-price {
+    width: 60px;
+}

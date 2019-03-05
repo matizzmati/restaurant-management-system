@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @restaurant.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @restaurant.address %>
+</p>
+
+<p>
+  <strong>Openning hours:</strong>
+  <%= @restaurant.openning_hours %>
+</p>
+
+<p>
+  <strong>Pizza in menu:</strong>
+  <ul>
+  <% @restaurant.pizzas.order(price: :asc).each do |pizza| %>
+    <li> 
+      <span class="pizza-name"> <%= pizza.name %> </span>
+      <span class="pizza-price"> <%= '%.2f' % pizza.price.round(2) %> </span>
+      <span class="pizza-ingredients"> <%= pizza.ingredients.truncate(40, separator: ',') %> </span>
+    </li>
+  <% end %>
+  </ul>
+</p>
+
+
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%= link_to 'Back', restaurants_path %>

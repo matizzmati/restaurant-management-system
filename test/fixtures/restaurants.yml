@@ -1,0 +1,6 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 'Diavolo'
+  address: 'Testowa 11'
+  openning_hours: '00:00 - 23:00'
